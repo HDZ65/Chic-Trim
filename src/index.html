@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=New+Amsterdam&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="text-text bg-background font-montserrat max-w-[100dvw] overflow-x-clip ">
+
+  <!-- Header -->
+  <header id="navbar" class="overflow-x-hidden max-w-[100dvw] px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 bg-white w-full md:border-b md:border-text py-3 flex justify-between items-center transition-transform duration-300 ease-in-out z-50">
+    <h1 class="text-2xl lg:text-3xl xl:text-4xl font-extrabold font-FjallaOne uppercase tracking-tighter">Chic&Trim</h1>
+
+    <!-- Menu principal -->
+    <nav class="md:block max-md:absolute top-[56px] bg-white duration-300 -right-full w-full text-center flex flex-col gap-4 justify-start items-center z-50 max-md:h-screen" role="navigation" aria-label="Menu principal">
+      <ul class="max-md:w-full flex flex-col md:flex-row md:gap-8 justify-center items-center font-bold font-montserrat max-md:text-3xl">
+        <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="index.html">Accueil<span class="bg-text underline-animation"></span></a>
+        <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="galerie.html">Galerie<span class="bg-text underline-animation"></span></a>
+        <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="equipe.html">Équipe<span class="bg-text underline-animation"></span></a>
+      </ul>
+      <div id="reseaux-sociaux" class="hidden max-md:flex justify-center items-center gap-6 mt-4">
+        <a href="#" aria-label="Instagram" class="hover:text-gray-300 text-4xl"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-gray-300 text-4xl"><i class="fa fa-facebook"></i></a>
+      </div>
+    </nav>
+
+    <!-- Menu Burger -->
+    <button id="menu-toggle" class="md:hidden relative h-8 w-8 flex justify-center items-center" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <span class="absolute h-1 w-full translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
+      <span class="absolute h-1 w-full bg-text transition-opacity duration-300 ease-in-out rounded-full"></span>
+      <span class="absolute h-1 w-full -translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
+    </button>
+
+    <button class="hidden md:block font-bold md:px-4 md:py-2 px-2 py-2 text-white bg-text uppercase hover:text-black hover:bg-white hover:border-black border-4 border-transparent transition-colors duration-300 ease-out whitespace-nowrap"><i class="mr-2 fa fa-calendar"></i>rendez-vous</button>
+  </header>
+
+  <!-- Main -->
+  <main class="flex flex-col bg-zinc-200 overflow-x-clip">
+
+    <!-- Hero -->
+    <section class="pb-8 2xl:pb-16 animate-section" id="hero">
+      <div class="relative">
+        <img src="assets/benyamin-bohlouli-LGXN4OSQSa4-unsplash.jpg" alt="Image du salon Chic & Trim" class="w-full h-96 lg:h-[35rem] 2xl:h-[40rem] object-cover filter brightness-50">
+        <div class="items-center text-center px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 absolute inset-0 flex justify-center flex-col gap-6 text-white" id="hero-text">
+          <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center font-FjallaOne uppercase">Bienvenue chez Chic&Trim</h1>
+          <p class="lg:text-lg">Découvrez l'ambiance dynamique et élégante de notre salon, où chaque détail est pensé pour votre confort.</p>
+          <button class="md:w-fit mx-auto font-bold md:px-4 md:py-2 px-2 py-2 text-white bg-text uppercase hover:text-black hover:bg-white hover:border-black border-transparent border-4 transition-colors duration-300 ease-out"><i class="mr-2 fa fa-calendar"></i>rendez-vous</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tendances -->
+    <section class="flex flex-col justify-center items-center   xl:mx-40 2xl:mx-80 py-8 2xl:pb-16 animate-section" id="tendances">
+      <div class="flex flex-col gap-6 mb-8 2xl:mb-16">
+        <h3 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center font-FjallaOne uppercase">Tendances</h3>
+        <p class="text-center">Notre collection 2024, Découvrez nos dernières tendances en coiffure et <br> trouvez votre style !</p>
+        <button class="md:w-fit px-4 py-2 font-extrabold uppercase transition-colors duration-300 ease-out border-4 text-black border-black hover:text-white hover:bg-black mt-4 mx-auto">Gallerie</button>
+      </div>
+
+      <div class="flex flex-col lg:flex-row w-full mt-8">
+        <article class="relative group w-full">
+          <a href="tendances.html">
+            <img src="assets/oladimeji-odunsi-AHBvAIVqk64-unsplash.jpg" alt="Image 1" class="w-full h-auto md:h-52 lg:h-72 xl:h-[15rem] 2xl:h-[25rem] object-cover filter max-lg:brightness-50 lg:group-hover:brightness-50 transition-all duration-300 ease-in-out">
+            <div class="absolute inset-0 bg-overlay flex items-center justify-center flex-col text-white p-5">
+              <h2 class="text-xl font-bold text-center lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 ease-in-out">Style et Élégance</h2>
+            </div>
+          </a>
+        </article>
+
+        <article class="relative group w-full">
+          <a href="tendances.html">
+            <img src="assets/george-bohunicky-qJKT2rMU0VU-unsplash.jpg" alt="Image 2" class="w-full h-auto md:h-52 lg:h-72 xl:h-[15rem] 2xl:h-[25rem] object-cover filter max-lg:brightness-50 lg:group-hover:brightness-50 transition-all duration-300 ease-in-out">
+            <div class="absolute inset-0 bg-overlay flex items-center justify-center flex-col text-white p-5">
+              <h2 class="text-xl font-bold text-center lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 ease-in-out">Couleurs Vibrantes</h2>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="animate-section flex flex-col justify-center items-center gap-6 px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 py-8 2xl:py-16">
+      <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold font-FjallaOne text-center uppercase">Nos Services</h2>
+      <div class="flex flex-wrap justify-center whitespace-nowrap gap-4">
+        <p><i class="fa fa-cut"></i> Coupe de cheveux</p>
+        <p><i class="fa fa-paint-brush"></i> Coloration</p>
+        <p><i class="fa fa-magic"></i> Lissage brésilien</p>
+        <p><i class="fa fa-leaf"></i> Soins capillaires</p>
+        <p><i class="fa fa-star"></i> Coiffure de mariage</p>
+      </div>
+      <a href="equipe.html" class="px-4 py-2 md:w-fit font-extrabold uppercase transition-colors duration-300 ease-out border-4 text-black border-black hover:text-white hover:bg-black mt-4 text-center">Voir l'équipe</a>
+    </section>
+
+    <!-- Carousel -->
+    <section class="relative mb-8 md:mb-16 mx-4 md:mx-10 lg:mx-20 xl:mx-40 2xl:mx-80 animate-section overflow-x-clip" aria-label="Carrousel d'images" id="carousel-section">
+      <div id="carousel" class="relative flex justify-start w-full">
+        <img src="assets/atikh-bana-_KaMTEmJnxY-unsplash.jpg" alt="Image 3" class="min-w-full md:h-[30rem] h-72 object-cover">
+        <img src="assets/averie-woodard-4nulm-JUYFo-unsplash.jpg" alt="Image 1" class="min-w-full md:h-[30rem] h-72 object-cover">
+        <img src="assets/aiony-haust-3TLl_97HNJo-unsplash.jpg" alt="Image 2" class="min-w-full md:h-[30rem] h-72 object-cover">
+      </div>
+      <div class="absolute flex justify-between items-center inset-0 md:h-[30rem] h-72 w-full px-4">
+        <button class="flex justify-center items-center rounded-full px-2 py-1 text-2xl" id="chevron-left" aria-label="Image précédente">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button class="flex justify-center items-center rounded-full px-2 py-1 text-2xl" id="chevron-right" aria-label="Image suivante">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4" role="tablist">
+        <span id="dot-1" class="h-3 w-3 rounded-full border-2 border-white" role="tab" aria-selected="true"></span>
+        <span id="dot-2" class="h-3 w-3 rounded-full border-2 border-white" role="tab" aria-selected="false"></span>
+        <span id="dot-3" class="h-3 w-3 rounded-full border-2 border-white" role="tab" aria-selected="false"></span>
+      </div>
+    </section>
+
+    <!-- Réseaux sociaux -->
+    <section class="flex flex-col gap-6 px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 bg-secondary py-8 2xl:py-16 animate-section" id="social-media">
+      <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-text font-FjallaOne uppercase tracking-tighter">
+        <span class="text-5xl">#</span>Chic&Trim
+      </h2>
+      <p class="text-center text-base lg:text-lg">Découvrez toutes les nouveautés dans nos salon et hors des murs. Suivez-nous sur les réseaux sociaux pour les dernières actualités.</p>
+      <div class="flex justify-center items-center gap-6">
+        <a href="#" aria-label="Instagram" class="hover:text-gray-300 text-4xl"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-gray-300 text-4xl"><i class="fa fa-facebook"></i></a>
+        <a href="#" aria-label="YouTube" class="hover:text-gray-300 text-4xl"><i class="fa fa-youtube"></i></a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="flex flex-col justify-center items-center gap-6 px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 py-8 2xl:py-16 animate-section" id="contact">
+      <div>
+        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-text font-FjallaOne uppercase">Contact</h2>
+        <p class="text-center">Contactez-nous pour plus d'informations</p>
+      </div>
+
+      <form class="flex flex-col gap-4 max-w-7xl w-full md:w-2/3">
+        <input type="text" placeholder="Nom" class="border-2 border-text outline-none focus:border-white px-2 py-1">
+        <input type="email" placeholder="Email" class="border-2 border-text outline-none focus:border-white px-2 py-1">
+        <textarea placeholder="Message" class="border-2 border-text outline-none focus:border-white px-2 py-1"></textarea>
+        <button type="submit" class="px-4 py-2 font-extrabold uppercase transition-colors duration-300 ease-out border-4 text-black border-black hover:text-white hover:bg-black mt-4 text-center">Envoyer</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-text text-background px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 py-8 flex flex-col gap-6">
+    <!-- Horraires -->
+    <section class="flex flex-col">
+      <h2 class="text-xl lg:text-2xl font-bold text-start">Horraires</h2>
+      <p class="text-start">Notre salon est ouvert du lundi au samedi de 9h00 à 18h00.</p>
+    </section>
+    <div class="max-w-7xl mx-auto px-5 flex justify-between items-center gap-4">
+      <p>&copy; 2023 Chic & Trim - Tous droits réservés</p>
+      <div class="flex space-x-4">
+        <a href="#" aria-label="Instagram" class="hover:text-gray-300"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-gray-300"><i class="fa fa-facebook"></i></a>
+        <a href="#" aria-label="YouTube" class="hover:text-gray-300"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+    <!-- Signature du développeur -->
+    <div class="text-center mt-4">
+      <p>Développé par <a href="https://www.linkedin.com/in/alexandre-hernandez-392603309/" target="_blank" class="underline hover:text-gray-300">Alexandre HERNANDEZ</a></p>
+    </div>
+  </footer>
+
+  <!-- Alerte personnalisée -->
+  <div id="custom-alert" class="fixed top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded shadow-md w-11/12 max-w-md z-50 hidden" role="alert" aria-live="assertive">
+    <div class="flex justify-between items-center">
+      <p>Attention : Ce site est une vitrine. L'entreprise n'existe pas.</p>
+      <button id="close-alert" class="text-red-700 text-lg font-bold" aria-label="Fermer l'alerte">&times;</button>
+    </div>
+  </div>
+
+</body>
+<script src="../src/script.js"></script>
+
+</html>

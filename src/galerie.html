@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=New+Amsterdam&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+</head>
+
+<body class="text-text bg-background font-montserrat">
+
+  <!-- Header -->
+  <header id="navbar"
+    class="overflow-x-clip px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 bg-white w-full md:border-b md:border-text py-3 flex justify-between items-center transition-transform duration-300 ease-in-out z-50">
+    <h1 class="text-2xl lg:text-3xl xl:text-4xl font-extrabold font-FjallaOne uppercase tracking-tighter">Chic&Trim</h1>
+
+    <!-- Menu principal -->
+    <nav
+      class="md:block max-md:absolute top-[56px] bg-white duration-300 -right-full w-full text-center flex flex-col gap-4 justify-start items-center z-50 max-md:h-screen"
+      role="navigation" aria-label="Menu principal">
+      <ul
+        class="max-md:w-full flex flex-col md:flex-row md:gap-8 justify-center items-center font-bold font-montserrat max-md:text-3xl">
+        <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="index.html">Accueil<span
+            class="bg-text underline-animation"></span></a>
+        <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="galerie.html">Galerie<span
+            class="bg-text underline-animation"></span></a>
+        <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="equipe.html">Équipe<span
+            class="bg-text underline-animation"></span></a>
+      </ul>
+      <div id="reseaux-sociaux" class="hidden max-md:flex justify-center items-center gap-6 mt-4">
+        <a href="#" aria-label="Instagram" class="hover:text-gray-300 text-4xl"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-gray-300 text-4xl"><i class="fa fa-facebook"></i></a>
+      </div>
+    </nav>
+
+    <!-- Menu Burger -->
+    <button id="menu-toggle" class="md:hidden relative h-8 w-8 flex justify-center items-center" aria-expanded="false"
+      aria-controls="menu" aria-label="Ouvrir le menu">
+      <span
+        class="absolute h-1 w-full translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
+      <span class="absolute h-1 w-full bg-text transition-opacity duration-300 ease-in-out rounded-full"></span>
+      <span
+        class="absolute h-1 w-full -translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
+    </button>
+
+    <button
+      class="hidden md:block font-bold md:px-4 md:py-2 px-2 py-2 text-white bg-text uppercase hover:text-black hover:bg-white hover:border-black border-4 border-transparent transition-colors duration-300 ease-out whitespace-nowrap"><i
+        class="mr-2 fa fa-calendar"></i>rendez-vous</button>
+  </header>
+
+  <!-- Main -->
+  <main class="flex flex-col justify-center items-center bg-zinc-200 ">
+
+    <!-- Coupe -->
+    <div
+      class="animate-section flex flex-col justify-center items-center gap-6 px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 py-4 2xl:py-8 w-full bg-text text-background">
+      <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center font-FjallaOne uppercase">Des coupes originales
+      </h2>
+      <p class="text-center font-montserrat">Découvrez nos coupes tendances choisies et pensées et créées par nos
+        coiffeurs.</p>
+    </div>
+    <!-- Section de la galerie d'images en grille responsive -->
+    <section class="animate-section min-w-full px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 pb-8 2xl:pb-16 pt-4 2xl:pt-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-7xl mx-auto">
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img class="h-full object-cover  hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/14.jpg" alt="Coiffure 3">
+        </div>
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img class="h-full object-cover  hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/11.jpg" alt="Coiffure 3">
+        </div>
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img class="h-full object-cover  hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/5.jpg" alt="Coiffure 3">
+        </div>
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img class="h-full object-cover  hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/17.jpg" alt="Coiffure 3">
+        </div>
+      </div>
+    </section>
+
+    <!-- Couleurs -->
+    <div
+      class="animate-section flex flex-col justify-center items-center gap-6 px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 py-4 2xl:py-8 bg-secondary w-full mt-4 2xl:mt-8">
+      <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-text font-FjallaOne uppercase">Des couleurs
+        petillantes</h2>
+      <p class="text-center text-text font-montserrat">Par notre coloriste Lucas, qui vous propose ces nouvelles
+        colorations pour la collection printemps/été.</p>
+    </div>
+    <section class="animate-section min-w-full px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 pb-8 2xl:pb-16 pt-4 2xl:pt-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-7xl mx-auto">
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img
+            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/8.jpg" alt="Coiffure 3">
+        </div>
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img
+            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/9.jpg" alt="Coiffure 3">
+        </div>
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img
+            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/1.jpg" alt="Coiffure 4">
+        </div>
+        <div class="w-full overflow-hidden aspect-w-3 aspect-h-4 mx-auto">
+          <img
+            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 ease-in-out"
+            src="assets/george-bohunicky-qJKT2rMU0VU-unsplash.jpg" alt="Coiffure 4">
+        </div>
+      </div>
+    </section>
+
+    <!-- Réalisations -->
+    <div
+      class="animate-section flex flex-col justify-center items-center gap-6 px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 pt-8 2xl:pt-16 w-full">
+      <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-text font-FjallaOne uppercase">Nos
+        Réalisations</h2>
+      <p class="text-center text-text font-montserrat">Découvrez toutes nos réalisations.</p>
+    </div>
+
+    <!-- Galerie d'images en grille responsive -->
+    <section class="animate-section min-w-full px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 pb-8 2xl:pb-16 pt-4 2xl:pt-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6 gap-4">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover" src="assets/1.jpg" alt="Coiffure 1">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/3.jpg" alt="Coiffure 3">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/5.jpg" alt="Coiffure 5">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/6.jpg" alt="Coiffure 6">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/7.jpg" alt="Coiffure 7">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/8.jpg" alt="Coiffure 8">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/9.jpg" alt="Coiffure 9">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/10.jpg" alt="Coiffure 10">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/11.jpg" alt="Coiffure 11">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/12.jpg" alt="Coiffure 12">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/13.jpg" alt="Coiffure 13">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/14.jpg" alt="Coiffure 14">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/15.jpg" alt="Coiffure 15">
+        <img class="max-sm:w-full w-[18rem] h-[23rem] object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="assets/17.jpg" alt="Coiffure 17">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-text text-background px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 py-8 flex flex-col gap-6">
+    <section class="flex flex-col ">
+      <h2 class="text-xl lg:text-2xl  font-bold text-start ">
+        Horraires</h2>
+      <p class="text-start">Notre salon est ouvert du lundi au samedi de 9h00 à 18h00.</p>
+    </section>
+    <div class="max-w-7xl mx-auto px-5 flex justify-between items-center gap-4">
+      <p>&copy; 2023 Chic & Trim - Tous droits réservés</p>
+      <div class="flex space-x-4">
+        <a href="#" aria-label="Instagram" class="hover:text-gray-300"><i class="fa fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-gray-300"><i class="fa fa-facebook"></i></a>
+        <a href="#" aria-label="YouTube" class="hover:text-gray-300"><i the="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="../src/script.js"></script>
+
+</html>
