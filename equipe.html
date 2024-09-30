@@ -19,47 +19,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </head>
 
-<body class="flex flex-col justify-between min-h-screen text-text bg-background font-montserrat ">
+<body class="text-text bg-background font-montserrat max-w-[100dvw] ">
 
     <!-- Header -->
-    <header id="navbar"
-        class="overflow-x-clip px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 bg-white  w-full  md:border-b md:border-text py-3 flex justify-between items-center transition-transform duration-300 ease-in-out z-50">
-        <h1 class="text-2xl lg:text-3xl xl:text-4xl font-extrabold font-FjallaOne uppercase tracking-tighter">Chic&Trim
-        </h1>
-
-        <!-- Menu principal -->
-        <nav class="md:block max-md:absolute top-[56px] bg-white duration-300 -right-full w-full text-center flex flex-col gap-4 justify-start items-center z-50 max-md:h-screen"
-            role="navigation" aria-label="Menu principal">
-            <ul
-                class="max-md:w-full flex flex-col md:flex-row md:gap-8 justify-center items-center font-bold font-montserrat max-md:text-3xl">
-                <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="index.html">Accueil<span
-                        class="bg-text underline-animation"></span></a>
-                <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="galerie.html">Galerie<span
-                        class="bg-text underline-animation"></span></a>
-                <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="equipe.html">Équipe<span
-                        class="bg-text underline-animation"></span></a>
-            </ul>
-            <div id="reseaux-sociaux" class="hidden max-md:flex justify-center items-center gap-6 mt-4">
-                <a href="#" aria-label="Instagram" class="hover:text-gray-300 text-4xl"><i
-                        class="fa fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook" class="hover:text-gray-300 text-4xl"><i
-                        class="fa fa-facebook"></i></a>
-            </div>
-        </nav>
-
-        <!-- Menu Burger -->
-        <button id="menu-toggle" class="md:hidden relative h-8 w-8 flex justify-center items-center"
-            aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
-            <span
-                class="absolute h-1 w-full translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
-            <span class="absolute h-1 w-full bg-text  transition-opacity duration-300 ease-in-out rounded-full"></span>
-            <span
-                class="absolute h-1 w-full -translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
-        </button>
-
-        <button
-            class="hidden md:block font-bold md:px-4 md:py-2 px-2 py-2 text-white bg-text uppercase hover:text-black hover:bg-white hover:border-black border-4 border-transparent transition-colors duration-300 ease-out whitespace-nowrap"><i
-                class="mr-2 fa fa-calendar"></i>rendez-vous</button>
+    <header id="navbar" class=" relative overflow-x-clip max-w-[100dvw] px-4 md:px-5 lg:px-10 xl:px-20 2xl:px-40 bg-white w-full md:border-b md:border-text py-3 flex justify-between items-center transition-transform duration-300 ease-in-out z-50">
+      <h1 class="text-2xl lg:text-3xl xl:text-4xl font-extrabold font-FjallaOne uppercase tracking-tighter">Chic&Trim</h1>
+  
+      <!-- Menu principal -->
+      <nav class="md:block max-md:absolute top-[56px] bg-white duration-300 -right-full w-full text-center flex flex-col gap-4 justify-start items-center z-50 max-md:h-screen" role="navigation" aria-label="Menu principal">
+        <ul class="max-md:w-full flex flex-col md:flex-row md:gap-8 justify-center items-center font-bold font-montserrat max-md:text-3xl">
+          <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="index.html">Accueil<span class="bg-text underline-animation"></span></a>
+          <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="galerie.html">Galerie<span class="bg-text underline-animation"></span></a>
+          <a class="nav-link max-md:pt-8 max-md:w-full text-center" href="equipe.html">Équipe<span class="bg-text underline-animation"></span></a>
+        </ul>
+        <div id="reseaux-sociaux" class="hidden max-md:flex justify-center items-center gap-6 mt-4">
+          <a href="#" aria-label="Instagram" class="hover:text-gray-300 text-4xl"><i class="fa fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-gray-300 text-4xl"><i class="fa fa-facebook"></i></a>
+        </div>
+      </nav>
+  
+      <!-- Menu Burger -->
+      <button id="menu-toggle" class="md:hidden relative h-8 w-8 flex justify-center items-center" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span class="absolute h-1 w-full translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
+        <span class="absolute h-1 w-full bg-text transition-opacity duration-300 ease-in-out rounded-full"></span>
+        <span class="absolute h-1 w-full -translate-y-2 bg-text transition-transform duration-300 ease-in-out rounded-full"></span>
+      </button>
+  
+      <button class="hidden md:block font-bold md:px-4 md:py-2 px-2 py-2 text-white bg-text uppercase hover:text-black hover:bg-white hover:border-black border-4 border-transparent transition-colors duration-300 ease-out whitespace-nowrap"><i class="mr-2 fa fa-calendar"></i>rendez-vous</button>
     </header>
 
 

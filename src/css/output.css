@@ -644,8 +644,8 @@ video {
   aspect-ratio: 3/4;
 }
 
-.aspect-\[3\/\] {
-  aspect-ratio: 3/;
+.aspect-\[3\/2\] {
+  aspect-ratio: 3/2;
 }
 
 .h-1 {
@@ -1508,5 +1508,3 @@ video {
     padding-top: 2rem;
   }
 }
-
-
